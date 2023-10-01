@@ -1,20 +1,17 @@
 package mx.uaemex.fi.paradigmas_I.figuras.vista;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
+import mx.uaemex.fi.paradigmas_I.figuras.data.PoligonoRegular;
+
+import javax.swing.*;
 import java.awt.GridLayout;
 
 public class PanelPoligonos extends PanelDeFigura {
-    private JSpinner ladoSpinner;
-    private JSpinner apotemaSpinner;
-
     public PanelPoligonos() {
-        super();
+        JSpinner ladoSpinner;
+        JSpinner apotemaSpinner;
 
         // tamaño del panel con un GridLayout
-        setLayout(new GridLayout(2, 2));
+        this.setLayout(new GridLayout(2, 2));
 
         // etiquetas para "Lado" y "Apotema"
         JLabel ladoLabel = new JLabel("Lado:");
@@ -25,12 +22,11 @@ public class PanelPoligonos extends PanelDeFigura {
         apotemaSpinner = new JSpinner(new SpinnerNumberModel(0.0, 0.0, Double.MAX_VALUE, 0.1));
 
         // Agrega los componentes al panel
-        add(ladoLabel);
-        add(ladoSpinner);
-        add(apotemaLabel);
-        add(apotemaSpinner);
+        this.add(ladoLabel);
+        this.add(ladoSpinner);
+        this.add(apotemaLabel);
+        this.add(apotemaSpinner);
     }
-
     @Override
     public void setData() {
         // se obtienen los valores del lado y el apotema desde los JSpinners
@@ -38,6 +34,6 @@ public class PanelPoligonos extends PanelDeFigura {
         double apotema = (double) apotemaSpinner.getValue();
 
         // crea una instancia de Figura con los datos ingresados
-        f = new Figura(lado, apotema);
+        f = new PoligonoRegular(lado, apotema, numeroLados);
     }
 }
