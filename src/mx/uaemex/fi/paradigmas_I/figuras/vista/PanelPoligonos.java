@@ -37,3 +37,4 @@ public class PanelPoligonos extends PanelDeFigura {
         f = new PoligonoRegular(lado, apotema, numeroLados);
     }
 }
+//He, pero si es el bueno o no? o nada
