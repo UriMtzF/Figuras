@@ -2,7 +2,9 @@ package mx.uaemex.fi.paradigmas_I.figuras.vista;
 
 import mx.uaemex.fi.paradigmas_I.figuras.data.Figura;
 
-public abstract class PanelDeFigura {
+import javax.swing.*;
+
+public abstract class PanelDeFigura extends JPanel {
     protected Figura f;
 
     public PanelDeFigura() {}
