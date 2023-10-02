@@ -7,10 +7,12 @@ import javax.swing.*;
 public abstract class PanelDeFigura extends JPanel {
     protected Figura f;
 
-    public PanelDeFigura() {}
+    public PanelDeFigura() {
+    }
 
     public Figura getF() {
         return f;
     }
+
     public abstract void setData();
 }

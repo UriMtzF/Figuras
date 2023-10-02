@@ -10,8 +10,8 @@ public class VentanaData extends JFrame implements ActionListener {
     private JButton bGuardar;
 
     public VentanaData(JPanel pData, String figura) throws HeadlessException {
-        super(figura.substring(0,1).toUpperCase() + figura.substring(1));
-        this.setLayout(new GridLayout(3,1));
+        super(figura.substring(0, 1).toUpperCase() + figura.substring(1));
+        this.setLayout(new GridLayout(3, 1));
 
         JLabel lImagen = new JLabel(getImage(figura));
         lImagen.setHorizontalAlignment(JLabel.CENTER);
@@ -24,7 +24,7 @@ public class VentanaData extends JFrame implements ActionListener {
         this.add(pData);
         this.add(this.bGuardar);
 
-        this.setSize(200,300);
+        this.setSize(200, 300);
         this.setLocationRelativeTo(null);
     }
 
@@ -32,13 +32,14 @@ public class VentanaData extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         //TODO: Implementar funcion boton Guardar datos
     }
-    private ImageIcon getImage(String figura){
-        String[] figurasDisponibles = {"triangulo","cuadrado","rectangulo","pentagono","hexagono",
-        "heptagono","octagono","nonagono","circulo"};
+
+    private ImageIcon getImage(String figura) {
+        String[] figurasDisponibles = {"triangulo", "cuadrado", "rectangulo", "pentagono", "hexagono",
+                "heptagono", "octagono", "nonagono", "circulo"};
 
         boolean esFiguraValida = false;
 
-        for (String f:figurasDisponibles){
+        for (String f : figurasDisponibles) {
             if (f.equals(figura)) {
                 esFiguraValida = true;
                 break;
@@ -47,14 +48,14 @@ public class VentanaData extends JFrame implements ActionListener {
 
         ImageIcon iconoOriginal;
 
-        if (esFiguraValida){
-            iconoOriginal = new ImageIcon("res/"+figura+".png");
-        }else {
+        if (esFiguraValida) {
+            iconoOriginal = new ImageIcon("res/" + figura + ".png");
+        } else {
             iconoOriginal = new ImageIcon("res/default.png");
         }
 
         Image imagenOriginal = iconoOriginal.getImage();
-        Image imagenRedimensionada = imagenOriginal.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+        Image imagenRedimensionada = imagenOriginal.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
 
         return new ImageIcon(imagenRedimensionada);
     }
