@@ -10,7 +10,7 @@ public class PoligonoRegular extends FiguraDeLadosIguales {
 
     @Override
     public double area() {
-        return this.perimetro()*this.apotema/2;
+        return this.perimetro() * this.apotema / 2;
     }
 
     public double getApotema() {
