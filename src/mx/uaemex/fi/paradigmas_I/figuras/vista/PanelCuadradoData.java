@@ -13,7 +13,7 @@ public class PanelCuadradoData extends PanelDeFigura {
 
         JLabel lado = new JLabel("Lado:");
 
-        ladoSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
+        ladoSpinner = new JSpinner(new SpinnerNumberModel(0.0, 0, 100, 1));
 
         this.add(lado);
         this.add(ladoSpinner);

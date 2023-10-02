@@ -15,8 +15,8 @@ public class PanelRectanguloData extends PanelDeFigura {
         JLabel ancho = new JLabel("Ancho:");
         JLabel largo = new JLabel("Largo:");
 
-        anchoSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
-        largoSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
+        anchoSpinner = new JSpinner(new SpinnerNumberModel(0.0, 0, 100, 1));
+        largoSpinner = new JSpinner(new SpinnerNumberModel(0.0, 0, 100, 1));
 
         this.add(ancho);
         this.add(anchoSpinner);

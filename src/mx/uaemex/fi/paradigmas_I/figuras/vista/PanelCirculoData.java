@@ -13,7 +13,7 @@ public class PanelCirculoData extends PanelDeFigura {
 
         setLayout(new GridLayout(1, 2));
 
-        modelo = new SpinnerNumberModel(0, 0, 100, 1);
+        modelo = new SpinnerNumberModel(0.0, 0, 100, 1);
 
         etqRadio = new JLabel("Radio: ");
         radio = new JSpinner();
