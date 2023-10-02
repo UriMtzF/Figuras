@@ -5,10 +5,10 @@ import mx.uaemex.fi.paradigmas_I.figuras.data.PoligonoRegular;
 import javax.swing.*;
 import java.awt.GridLayout;
 
-public class PanelPoligonos extends PanelDeFigura {
+public class PanelPoligono extends PanelDeFigura {
     private JSpinner ladoSpinner;
     private JSpinner apotemaSpinner;
-    public PanelPoligonos() {
+    public PanelPoligono() {
         // tamaño del panel con un GridLayout
         this.setLayout(new GridLayout(2, 2));
 
@@ -31,8 +31,5 @@ public class PanelPoligonos extends PanelDeFigura {
         // se obtienen los valores del lado y el apotema desde los JSpinners
         double lado = (double) ladoSpinner.getValue();
         double apotema = (double) apotemaSpinner.getValue();
-
-        // ahora con PoligonoRegular
-        f = new PoligonoRegular(lado, apotema, numeroLados);
     }
 }
