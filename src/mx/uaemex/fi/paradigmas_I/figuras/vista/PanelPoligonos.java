@@ -6,10 +6,9 @@ import javax.swing.*;
 import java.awt.GridLayout;
 
 public class PanelPoligonos extends PanelDeFigura {
+    private JSpinner ladoSpinner;
+    private JSpinner apotemaSpinner;
     public PanelPoligonos() {
-        JSpinner ladoSpinner;
-        JSpinner apotemaSpinner;
-
         // tamaño del panel con un GridLayout
         this.setLayout(new GridLayout(2, 2));
 
@@ -33,8 +32,7 @@ public class PanelPoligonos extends PanelDeFigura {
         double lado = (double) ladoSpinner.getValue();
         double apotema = (double) apotemaSpinner.getValue();
 
-        // crea una instancia de Figura con los datos ingresados
+        // ahora con PoligonoRegular
         f = new PoligonoRegular(lado, apotema, numeroLados);
     }
 }
-//He, pero si es el bueno o no? o nada
