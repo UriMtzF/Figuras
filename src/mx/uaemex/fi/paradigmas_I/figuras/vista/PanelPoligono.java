@@ -17,8 +17,8 @@ public class PanelPoligono extends PanelDeFigura {
         JLabel apotemaLabel = new JLabel("Apotema:");
 
         // se crea JSpinners para ingresar el lado y el apotema
-        ladoSpinner = new JSpinner(new SpinnerNumberModel(0.0, 0.0, Double.MAX_VALUE, 0.1));
-        apotemaSpinner = new JSpinner(new SpinnerNumberModel(0.0, 0.0, Double.MAX_VALUE, 0.1));
+        ladoSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
+        apotemaSpinner = new JSpinner(new SpinnerNumberModel(0, 0, 100, 1));
 
         // Agrega los componentes al panel
         this.add(ladoLabel);

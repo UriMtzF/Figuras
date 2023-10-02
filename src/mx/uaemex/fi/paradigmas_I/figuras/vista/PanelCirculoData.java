@@ -8,13 +8,12 @@ public class PanelCirculoData extends PanelDeFigura {
     private JSpinner radio;
 
     public PanelCirculoData() {
-
         JLabel etqRadio;
         SpinnerModel modelo;
 
         setLayout(new GridLayout(1, 2));
 
-        modelo = new SpinnerNumberModel(0, 0, 1000, 1);
+        modelo = new SpinnerNumberModel(0, 0, 100, 1);
 
         etqRadio = new JLabel("Radio: ");
         radio = new JSpinner();
