@@ -1,3 +1,10 @@
+/*
+García Martínez María Fernanda
+Márquez López María Fernanda
+Hernandez Meza Victor Yahir
+Martínez Florez Uri
+ */
+
 package mx.uaemex.fi.paradigmas_I.figuras.data;
 
 public class PoligonoRegular extends FiguraDeLadosIguales {
