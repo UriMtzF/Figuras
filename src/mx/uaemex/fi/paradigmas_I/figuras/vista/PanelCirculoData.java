@@ -26,7 +26,7 @@ public class PanelCirculoData extends PanelDeFigura{
 
     }
 
-    @java.lang.Override
+    @Override
     public void setData() {
 
             }
