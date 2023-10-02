@@ -1,0 +1,27 @@
+package mx.uaemex.fi.paradigmas_I.figuras.vista;
+
+import mx.uaemex.fi.paradigmas_I.figuras.data.Cuadrado;
+
+import javax.swing.*;
+import java.awt.GridLayout;
+
+public class PanelCuadradoData extends PanelDeFigura {
+    private JSpinner ladoSpinner;
+
+    public PanelCuadradoData() {
+        this.setLayout(new GridLayout(1, 2));
+
+        JLabel lado = new JLabel("Lado:");
+
+        ladoSpinner = new JSpinner(new SpinnerNumberModel(0.0, 0.0, Double.MAX_VALUE, 0.1));
+
+        this.add(lado);
+        this.add(ladoSpinner);
+    }
+
+    @Override
+    public void setData() {
+        double lado = (double) ladoSpinner.getValue();
+        f = new Cuadrado(lado);
+    }
+}
