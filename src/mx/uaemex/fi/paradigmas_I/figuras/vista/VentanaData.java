@@ -10,7 +10,7 @@ public class VentanaData extends JFrame implements ActionListener {
     private JButton bGuardar;
 
     public VentanaData(JPanel pData, String figura) throws HeadlessException {
-        super(figura);
+        super(figura.substring(0,1).toUpperCase() + figura.substring(1));
         this.setLayout(new GridLayout(3,1));
 
         JLabel lImagen = new JLabel(getImage(figura));
@@ -24,7 +24,8 @@ public class VentanaData extends JFrame implements ActionListener {
         this.add(pData);
         this.add(this.bGuardar);
 
-        this.pack();
+        this.setSize(200,300);
+        this.setLocationRelativeTo(null);
     }
 
     @Override
@@ -47,9 +48,9 @@ public class VentanaData extends JFrame implements ActionListener {
         ImageIcon iconoOriginal;
 
         if (esFiguraValida){
-            iconoOriginal = new ImageIcon(figura+".png");
+            iconoOriginal = new ImageIcon("res/"+figura+".png");
         }else {
-            iconoOriginal = new ImageIcon("default.png");
+            iconoOriginal = new ImageIcon("res/default.png");
         }
 
         Image imagenOriginal = iconoOriginal.getImage();
