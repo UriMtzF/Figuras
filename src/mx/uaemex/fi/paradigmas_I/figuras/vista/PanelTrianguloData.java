@@ -20,7 +20,5 @@ public class PanelTrianguloData extends PanelDeFigura {
 
     @Override
     public void setData() {
-        double lado = (double) this.sLado.getValue();
-        this.f = new TrianguloEquilatero(lado);
     }
 }

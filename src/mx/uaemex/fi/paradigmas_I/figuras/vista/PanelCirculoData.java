@@ -22,12 +22,10 @@ public class PanelCirculoData extends PanelDeFigura {
 
         add(etqRadio);
         add(radio);
-
     }
 
     @Override
     public void setData() {
-
     }
 }
 

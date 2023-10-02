@@ -26,8 +26,5 @@ public class PanelRectanguloData extends PanelDeFigura {
 
     @Override
     public void setData() {
-        double ancho = (double) anchoSpinner.getValue();
-        double largo = (double) largoSpinner.getValue();
-        f = new Rectangulo(ancho, largo);
     }
 }

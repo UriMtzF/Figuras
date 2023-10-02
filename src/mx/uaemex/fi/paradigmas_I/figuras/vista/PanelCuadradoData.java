@@ -21,7 +21,5 @@ public class PanelCuadradoData extends PanelDeFigura {
 
     @Override
     public void setData() {
-        double lado = (double) ladoSpinner.getValue();
-        f = new Cuadrado(lado);
     }
 }

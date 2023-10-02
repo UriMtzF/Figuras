@@ -28,8 +28,5 @@ public class PanelPoligono extends PanelDeFigura {
     }
     @Override
     public void setData() {
-        // se obtienen los valores del lado y el apotema desde los JSpinners
-        double lado = (double) ladoSpinner.getValue();
-        double apotema = (double) apotemaSpinner.getValue();
     }
 }
