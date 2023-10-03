@@ -18,7 +18,9 @@ import java.awt.GridLayout;
 public class PanelPoligono extends PanelDeFigura {
     private JSpinner ladoSpinner;
     private JSpinner apotemaSpinner;
-    public PanelPoligono() {
+    private int numLados;
+    public PanelPoligono(int numLados) {
+        this.numLados = numLados;
         // tamaño del panel con un GridLayout
         this.setLayout(new GridLayout(2, 2));
 
@@ -38,5 +40,9 @@ public class PanelPoligono extends PanelDeFigura {
     }
     @Override
     public void setData() {
+        double lado = (double) ladoSpinner.getValue();
+        double apotema = (double) apotemaSpinner.getValue();
+
+        this.f = new PoligonoRegular(lado,apotema,this.numLados);
     }
 }

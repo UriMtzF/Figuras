@@ -9,6 +9,8 @@ García Martínez María Fernanda
  */
 package mx.uaemex.fi.paradigmas_I.figuras.vista;
 
+import mx.uaemex.fi.paradigmas_I.figuras.data.Circulo;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -34,6 +36,8 @@ public class PanelCirculoData extends PanelDeFigura {
 
     @Override
     public void setData() {
+        double radio = (double) this.radio.getValue();
+        this.f = new Circulo(radio);
     }
 }
 
